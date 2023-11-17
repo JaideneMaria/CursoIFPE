@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de estoque</title>
+</head>
+<body>
+    <script>
+        let produtos = [];
+        let quantidades = [];
+
+        let prod = "";
+        let qtd = 0;
+
+        //prod = String(prompt("Digite um produto: "));
+
+        while(prod !== "FIM"){       
+            prod = prompt("Digite um produto: ").toUpperCase();
+
+            if(prod !== "FIM") {
+                produtos.push(prod);
+                
+                qtd = parseInt(prompt("Digite uma quantidade: "));
+                quantidades.push(qtd);
+            }            
+        }
+
+        console.log(produtos)
+        console.log(quantidades)
+
+        for(let i = 0; i < produtos.length; i++ ){
+            document.write(produtos[i]+ " "+ quantidades[i] + "<br>");
+        }
+    </script>
+</body>
+</html>
